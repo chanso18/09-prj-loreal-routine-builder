@@ -54,10 +54,10 @@
       <!------- Chat Area ------->
       <section class="chatbox">
         <h2>Let's Build Your Routine</h2>
+
         <div id="chatWindow" class="chat-window"></div>
 
         <form id="chatForm" class="chat-form">
-          <label for="userInput" class="visually-hidden">Message</label>
           <input
             id="userInput"
             name="userInput"
@@ -85,8 +85,14 @@
       </footer>
     </div>
 
-    <!-- secrets.js can be removed when using Cloudflare Workers for API requests -->
-    <script src="secrets.js"></script>
+    <!-- Product info modal (hidden until opened) -->
+    <div id="productModal" class="modal" role="dialog" aria-hidden="true">
+      <div class="modal-content" role="document">
+        <button class="modal-close" aria-label="Close product info">×</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
