@@ -135,17 +135,12 @@ body {
   outline-offset: 2px;
 }
 
-/* visually hidden */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+/* ensure selected-list cards can host absolutely positioned overlay actions
+   without changing their size — position relative creates a positioning
+   context so .card-actions (absolute) sits on top of the card. */
+.selected-list-card {
+  position: relative;
+  overflow: visible;
 }
 
 /* footer */
