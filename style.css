@@ -97,10 +97,10 @@ body {
   line-height: 1.4;
 }
 
-/* assistant (AI) messages: left side, lighter shade */
+/* assistant (AI) messages: left side, updated background and text color */
 .chat-message.assistant {
-  background: #eef3ff;
-  color: #0b1a3a;
+  background: #ff003b; /* updated per request */
+  color: #ffffff; /* white text for contrast */
   align-self: flex-start; /* left */
   border-top-left-radius: 6px;
   border-top-right-radius: 16px;
@@ -157,27 +157,22 @@ body {
 
 .chat-form button {
   font-size: 18px;
-  background: #000;
-  color: #fff;
+  background: #000; /* changed back to black */
+  color: #fff; /* white text */
   border: none;
   padding: 12px 18px;
-  width: 110px; /* increased width so the Send button is wider */
+  width: 110px;
   height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.15s;
 }
 
 .chat-form button:hover {
-  background: #666666;
-}
-
-.chat-form button:focus {
-  outline: 2px solid #000;
-  outline-offset: 2px;
+  background: #111; /* subtle lighter black on hover */
 }
 
 /* ensure selected-list cards can host absolutely positioned overlay actions
@@ -280,10 +275,27 @@ body {
 
 /* selected products */
 .selected-products {
+  position: relative; /* ensure the clear button positions inside this box */
   margin: 40px 0;
   padding: 20px;
   border: 2px solid #000;
   border-radius: 8px;
+}
+
+.clear-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: 1px solid #000; /* black border */
+  color: #000; /* black text */
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.clear-btn:hover {
+  background: #f6f6f6;
 }
 
 .selected-products h2 {
@@ -297,22 +309,23 @@ body {
   gap: 10px;
 }
 
+/* Generate routine button: black background with white text */
 .generate-btn {
   width: 100%;
   margin-top: 20px;
   padding: 16px;
   font-size: 18px;
   font-weight: 500;
-  color: #fff;
-  background: #000;
+  color: #fff; /* white text */
+  background: #000; /* changed back to black */
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.15s;
 }
 
 .generate-btn:hover {
-  background: #666;
+  background: #111;
 }
 
 .generate-btn i {
